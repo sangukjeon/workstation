@@ -1,0 +1,75 @@
+$ pwd
+/home/sanguk/codyssey/workstation
+
+$ ls -la
+total 52
+drwxr-xr-x 7 sanguk sanguk  4096 Nov  4 02:34 .
+drwxr-xr-x 3 sanguk sanguk  4096 Nov  4 00:47 ..
+drwxr-xr-x 7 sanguk sanguk  4096 Nov  4 02:13 .git
+drwxr-xr-x 3 sanguk sanguk  4096 Nov  4 01:59 app
+drwxr-xr-x 3 sanguk sanguk  4096 Nov  4 01:14 docs
+-rw-r--r-- 1 sanguk sanguk 23866 Nov  4 00:49 get-docker.sh
+drwxr-xr-x 2 sanguk sanguk  4096 Nov  4 02:34 logs
+drwx------ 2 sanguk sanguk  4096 Nov  4 01:53 perm_dir
+-rwxr-xr-x 1 sanguk sanguk     0 Nov  4 01:53 perm_file.txt
+
+$ mkdir -p practice/sub
+
+$ cd practice
+
+$ pwd
+/home/sanguk/codyssey/workstation/practice
+
+$ touch empty.txt
+
+$ echo 'hello codyssey' > note.txt
+
+$ cat note.txt
+hello codyssey
+
+$ cp note.txt note_copy.txt
+
+$ mv note_copy.txt renamed.txt
+
+$ mv renamed.txt sub/
+
+$ ls -la sub
+total 12
+drwxr-xr-x 2 sanguk sanguk 4096 Nov  4 02:34 .
+drwxr-xr-x 3 sanguk sanguk 4096 Nov  4 02:34 ..
+-rw-r--r-- 1 sanguk sanguk   15 Nov  4 02:34 renamed.txt
+
+$ rm sub/renamed.txt
+
+$ rm -r sub
+
+$ ls -la
+total 12
+drwxr-xr-x 2 sanguk sanguk 4096 Nov  4 02:34 .
+drwxr-xr-x 8 sanguk sanguk 4096 Nov  4 02:34 ..
+-rw-r--r-- 1 sanguk sanguk    0 Nov  4 02:34 empty.txt
+-rw-r--r-- 1 sanguk sanguk   15 Nov  4 02:34 note.txt
+
+===== PERMISSION =====
+$ touch perm_file.txt
+
+$ mkdir perm_dir
+
+$ ls -l perm_file.txt
+-rw-r--r-- 1 sanguk sanguk 0 Nov  4 02:34 perm_file.txt
+
+$ ls -ld perm_dir
+drwxr-xr-x 2 sanguk sanguk 4096 Nov  4 02:34 perm_dir
+
+$ chmod 755 perm_file.txt
+
+$ chmod 700 perm_dir
+
+$ ls -l perm_file.txt
+-rwxr-xr-x 1 sanguk sanguk 0 Nov  4 02:34 perm_file.txt
+
+$ ls -ld perm_dir
+drwx------ 2 sanguk sanguk 4096 Nov  4 02:34 perm_dir
+
+$ cd /home/sanguk/codyssey/workstation
+
